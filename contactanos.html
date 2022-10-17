@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+    <link rel="stylesheet" href="estilos.css">
+    <link rel="stylesheet" href="formularioContacto.css">
+    <title>Contactanos</title>
+</head>
+
+<body>
+    <header>
+        <div class="encabezado">
+            <div class="h1_container">
+                <h1 class="header_h1">Celushop</h1>
+            </div>
+        </div>
+        <nav class="navbar navbar-expand-lg navbar-light bg-light">
+            <div class="container-fluid">
+                <div class="navbar">
+                    <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                        <li class="nav-item">
+                            <a class="nav-link active" aria-current="page" href="index.html"><i
+                                    class="fa-solid fa-arrow-left"></i>&nbsp; Inicio</a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </nav>
+    </header>
+    <main>
+        <div class="container">
+            <form action="https://formsubmit.co/12aca11ff5ef92da69d35cb774c5812a" method="POST" id="formulario">
+                <div class="form__control">
+                    <label for="usuario" class="form-label">Nombre</label>
+                    <input type="text" name="nombre" id="usuario_nombre" class="form-control">
+                    <p></p>
+                </div>
+
+                <div class="form__control">
+                    <label for="usuario" class="form-label">Apellido</label>
+                    <input type="text" name="apellido" id="usuario_apellido" class="form-control">
+                    <p></p>
+                </div>
+
+                <div class="form__control">
+                    <label for="email" class="form-label">Email</label>
+                    <input type="email" name="email" id="email" class="form-control">
+                    <p></p>
+                </div>
+                <div class="form-floating">
+                    <textarea name="mensaje" class="form-control" placeholder="Leave a comment here"
+                        id="floatingTextarea2" style="height: 100px"></textarea>
+                    <label for="floatingTextarea2" style="color:rgb(77, 77, 77); font-weight: 500;">Consulta</label>
+                </div>
+                <input type="hidden" name="_template" value="table">
+
+                <button class="btn btn-primary" id="btn_enviar" disabled>Enviar</button>
+            </form>
+        </div>
+
+    </main>
+    <script src="https://kit.fontawesome.com/c5aba234b8.js" crossorigin="anonymous"></script>
+    <script src="./Javascript/validacionNombre.js"></script>
+</body>
+
+</html>

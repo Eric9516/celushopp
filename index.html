@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+<html lang="es" id="index">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+    <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/toastify-js/src/toastify.min.css">
+    <link rel="stylesheet" href="estilos.css">
+    <title>Celushop</title>
+</head>
+
+<body>
+    <header>
+        <div class="encabezado">
+            <div class="h1_container">
+                <h1 class="header_h1">Celushop</h1>
+            </div>
+            <button type="button" class="btn btn-secondary position-relative" id="btn_carrito">
+                <i class="fa-solid fa-cart-shopping" style="color: #000;"></i>
+                <a href="carrito.html" style="margin: 0; text-decoration: none;">
+                    Carrito
+                </a>
+                <span class="position-absolute top-0 start-100 translate-middle badge rounded-pill bg-danger"
+                    id="numero">
+                    0 <span class="visually-hidden"></span>
+                </span>
+            </button>
+        </div>
+        <nav class="navbar navbar-expand-lg navbar-light bg-light">
+            <div class="container-fluid">
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
+                    data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent"
+                    aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                    <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                        <li class="nav-item">
+                            <a class="nav-link active" href="#">Nuestra empresa</a>
+                        </li>
+                        <li class="nav-item dropdown">
+                            <a class="nav-link active dropdown-toggle" href="#" id="navbarDropdown" role="button"
+                                data-bs-toggle="dropdown" aria-expanded="false">
+                                Productos
+                            </a>
+                            <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+                                <li><a class="dropdown-item" href="#">Samsung Galaxy S22 Ultra</a></li>
+                                <li><a class="dropdown-item" href="#">Samsung Galaxy Z Flip 3</a></li>
+                                <li><a class="dropdown-item" href="#">Samsung Galaxy Z Fold 3</a></li>
+                                <li><a class="dropdown-item" href="#">Samsung Galaxy S20fe</a></li>
+                                <li><a class="dropdown-item" href="#">Samsung Galaxy A 11</a></li>
+                                <li><a class="dropdown-item" href="#">Samsung Galaxy ZA13</a></li>
+                                <li><a class="dropdown-item" href="#">Motorola Moto G22</a></li>
+                                <li><a class="dropdown-item" href="#">Motorola Moto E20</a></li>
+                            </ul>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link active" aria-current="page" href="contactanos.html">Contactanos</a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </nav>
+    </header>
+    <main class="menu">
+        <section class="carrousel">
+            <div class="carrousel_container">
+                <div class="carrusel_container" style="height: 50vh;">
+                    <div id="carouselExampleFade" class="carousel slide carousel-fade" data-bs-ride="carousel">
+                        <div class="carousel-inner">
+                            <div class="carousel-item active">
+                                <img src="imagenes/carrusel/Samsung_Galaxy_Z_Flip.jpg" class="d-block w-100" alt="...">
+                            </div>
+                            <div class="carousel-item">
+                                <img src="imagenes/carrusel/renders-samsung-galaxy-z-flip-3.jpg" class="d-block w-100"
+                                    alt="...">
+                            </div>
+                            <div class="carousel-item">
+                                <img src="imagenes/carrusel/samsung.jpg" class="d-block w-100" alt="...">
+                            </div>
+
+                        </div>
+                        <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleFade"
+                            data-bs-slide="prev">
+                            <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                            <span class="visually-hidden">Previous</span>
+                        </button>
+                        <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleFade"
+                            data-bs-slide="next">
+                            <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                            <span class="visually-hidden">Next</span>
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <br>
+        <section class="productos">
+            <h2 class="h2_productos">Productos en stock</h2>
+            <hr>
+            <div class="articulos" id="articulos"></div>
+            <div class="articulos" id="Oferta">
+            </div>
+            <div class="oferta_semanal">
+                <h2 style="margin-bottom: 20px; font-size: 2.5em;">🎁Oferta de la semana!!🎁</h2>
+                <div id="contenedor_oferta" style="display: flex; justify-content:center;"></div>
+            </div>
+            <hr>
+            <div class="accordion" id="accordionPanelsStayOpenExample">
+                <div class="accordion-item">
+                    <h2 class="accordion-header" id="panelsStayOpen-headingOne">
+                        <button class="accordion-button" type="button" data-bs-toggle="collapse"
+                            data-bs-target="#panelsStayOpen-collapseOne" aria-expanded="true"
+                            aria-controls="panelsStayOpen-collapseOne">
+                            <strong>Equipos entrantes</strong>
+                        </button>
+                    </h2>
+                    <div id="panelsStayOpen-collapseOne" class="accordion-collapse collapse show"
+                        aria-labelledby="panelsStayOpen-headingOne">
+                        <div class="accordion-body" id="productos_entrantes_contenedor">
+                        </div>
+                    </div>
+                </div>
+            </div>
+            </div>
+            </div>
+        </section>
+    </main>
+    <footer>
+        <div class="informacion">
+            <p>
+                Gracias a una combinación de productos exclusivos y profesionales que brindan un servicio personalizado,
+                sabemos como cuidar tu bolsillo adecuándonos a tus necesidades, siempre buscando lo mejor para vos. Te
+                esperamos para que descubras un lugar único.
+            </p>
+            <i class="fa-brands fa-facebook" style="font-size: 2em; padding-right: 10px; cursor: pointer;"></i>
+            <i class="fa-brands fa-instagram" style="font-size: 2em; cursor: pointer;"></i>
+        </div>
+        <div class="contacto">
+            <p class="contact">Contacto</p>
+            <p><i class="fa-solid fa-phone"></i>&nbsp&nbsp</i><span>Teléfono:</span> 3478658900</p>
+            <p><i class="fa-solid fa-envelope"></i>&nbsp&nbsp<span>Email:</span> celushop@hotmail.com</p>
+            <p><i class="fa-solid fa-location-dot"></i>&nbsp&nbsp&nbsp<span>Dirección:</span> Saenz Peña 357 - Leones,
+                Córdoba</p>
+        </div>
+    </footer>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p"
+        crossorigin="anonymous"></script>
+    <script type="module" src="./Javascript/productos.js"></script>
+    <script type="module" src="./Javascript/mostrarProducto.js"></script>
+    <script type="module" src="./Javascript/agregarAlCarrito.js"></script>
+    <script src="./Javascript/productosEntrantes.js"></script>
+    <script src="https://kit.fontawesome.com/c5aba234b8.js" crossorigin="anonymous"></script>
+    <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/toastify-js"></script>
+</body>
+
+</html>

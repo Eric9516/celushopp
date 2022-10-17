@@ -1,0 +1,98 @@
+.container {
+	width: 60vw;
+	padding: 20px;
+	background-color: #fff;
+	border: 0.5px solid #cccccc;
+	border-radius: 15px;
+	margin-top: 20px;
+	margin-left: auto;
+	margin-right: auto;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	flex-direction: column;
+}
+
+form {
+	width: 75%;
+}
+
+p {
+	font-weight: 500;
+}
+
+.fa-circle-xmark {
+	color: red;
+}
+
+.titulo {
+	margin-bottom: 15px;
+}
+
+.form__control {
+	margin-bottom: 15px;
+}
+
+.form__control input {
+	padding: 5px;
+}
+
+.form__control label {
+	color: rgb(77, 77, 77);
+}
+
+.form__control:first-child {
+	display: flex;
+	flex-direction: column;
+	margin: 0;
+}
+
+.form__control:nth-child(2) {
+	display: flex;
+	flex-direction: column;
+}
+
+.form__control:nth-child(3) {
+	display: flex;
+	flex-direction: column;
+}
+
+.form__control.falla input {
+	border: 0.1px solid;
+	border-color: #fe5f55;
+}
+
+.form__control.falla label {
+	color: #fe5f55;
+}
+
+.form__control.ok input {
+	border: 0.1px solid;
+	border-color: #57db1a;
+	position: relative;
+}
+
+.form__control.ok p {
+	color: #57db1a;
+}
+
+.form__control.ok i {
+	color: #57db1a;
+}
+
+.form__control.ok label {
+	color: #57db1a;
+}
+
+.btn-primary {
+	width: 100%;
+}
+
+@media screen and (max-width: 600px) {
+	.container {
+		width: 70vw;
+	}
+	form {
+		width: 100%;
+	}
+}
